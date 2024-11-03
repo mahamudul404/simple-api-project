@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\GetDataController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GetDataController::class, 'index']);

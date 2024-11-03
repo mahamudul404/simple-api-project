@@ -23,7 +23,7 @@ class ProductController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'description' => 'required',    
+            'description' => 'required',
             'price' => 'required',
         ]);
 
@@ -57,10 +57,10 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
 
         //check if the products exits
-        if($product) {
+        if ($product) {
             $product->delete();
             return response()->json(['message' => 'products deleted successfully'], 200);
-        }else{
+        } else {
             return response()->json(['message' => 'product not found'], 404);
         }
     }
