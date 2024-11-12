@@ -25,6 +25,10 @@
             </tr>
         @endforeach
     </table>
-    
+
+    {{-- need some free api and display it --}}
+
+        
+
 </body>
 </html>
